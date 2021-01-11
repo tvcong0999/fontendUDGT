@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FrontEndUDGT"
+    }
+  },
+  "defaultProject": "FrontEndUDGT",
+  "cli": {
+    "analytics": "f530e343-1dc8-4d8e-9b62-fc4392af3290"
+  }
 }
