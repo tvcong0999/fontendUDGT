@@ -1,6 +1,6 @@
 <header>
     <div class="headerbackgroud">
-        <a class="navbar-brand" href="#">SỞ GIAO THÔNG VẬN TẢI THÀNH PHỐ HỒ CHÍ MINH</a>
+        <img src="assets/image/header.jpg" alt="">
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -64,8 +64,11 @@
                 <h4 class="titlePages">Cổng thông tin Giao thông <br> Thành phố Hồ Chí Minh</h4>
             </div>
             <div class="col-sm-3 counter">
-                <div id="timeanddate-date" class="counter-title">Chủ nhật, ngày 10 tháng 01, năm 2021</div>
-                <div id="timeanddate-time" class="counter-time">14:30:08</div>
+                <div id="timeanddate-date" class="counter-title">{{ dateObj | date }} </div>
+
+                <div id="timeanddate-time" class="counter-time">
+                    {{ time | date: 'hh:mm:ss a' }}
+                </div>
             </div>
             <div class="col-sm-5 traffic-home-contain">
                 <div class="col-sm-8 col-xs-6 counter">
@@ -91,8 +94,8 @@
     </div>
     <div style="clear: both"></div>
 </section>
-<div class="container">
-    <div class="slide">
+<div class="container row">
+    <div class="slide col-7">
         <div id="slide" class="carousel slide myslide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#slide" data-slide-to="0" class="active"></li>
@@ -121,8 +124,49 @@
             </a>
         </div>
     </div>
-
+    <div class="news col-5">
+        <div class="item d-flex">
+            <div class="items-img ">
+                <a
+                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">
+                    <img src="https://images.hcmcpv.org.vn/res/news/2020/05/28-05-2020-tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-8DB3800A.jpg?w=217&amp;h=139&amp;mode=pad&amp;vs=28052020092000"
+                        alt="">
+                </a>
+            </div>
+            <div class="items-title d-flex  align-items-end"><a
+                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">TPHCM
+                    kiến nghị thống nhất quy mô dự án xây dựng đường nối đường Trần Quốc Hoàn - Cộng Hòa</a></div>
+        </div>
+        <div class="item d-flex">
+            <div class="items-img ">
+                <a
+                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">
+                    <img src="https://images.hcmcpv.org.vn/res/news/2020/05/28-05-2020-tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-8DB3800A.jpg?w=217&amp;h=139&amp;mode=pad&amp;vs=28052020092000"
+                        alt="">
+                </a>
+            </div>
+            <div class="items-title d-flex  align-items-end"><a
+                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">TPHCM
+                    kiến nghị thống nhất quy mô dự án xây dựng đường nối đường Trần Quốc Hoàn - Cộng Hòa</a></div>
+        </div>
+        <div class="item d-flex">
+            <div class="items-img ">
+                <a
+                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">
+                    <img src="https://images.hcmcpv.org.vn/res/news/2020/05/28-05-2020-tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-8DB3800A.jpg?w=217&amp;h=139&amp;mode=pad&amp;vs=28052020092000"
+                        alt="">
+                </a>
+            </div>
+            <div class="items-title d-flex  align-items-end"><a
+                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">TPHCM
+                    kiến nghị thống nhất quy mô dự án xây dựng đường nối đường Trần Quốc Hoàn - Cộng Hòa</a></div>
+        </div>
+    </div>
 </div>
+
+<section id="divDashboard" class="bgGray">
+    <img src="assets/image/thongke.jpg" alt="">
+</section>
 <section id="Partners">
     <div class="footer">
         <div class="wow fadeInUp animated" data-wow-delay="0.4s"
@@ -187,7 +231,9 @@
             <i class="fab fa-facebook" aria-hidden="true"></i>
             <i class="fab fa-twitter" aria-hidden="true"></i>
             <i class="fab fa-google" aria-hidden="true"></i>
-            <i class="fas fa-envelope"></i>
+            <i><img class="email"
+                    src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63"></i>
+
         </div>
     </div>
 </section>

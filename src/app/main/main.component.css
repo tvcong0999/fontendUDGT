@@ -1,7 +1,9 @@
 .headerbackgroud {
   height: 100px;
-  background-image: url("https://lh3.googleusercontent.com/proxy/Jd2IcTnELalVLI5L88HFVYz24LF1dq_w7ju0EkMoDy94c5cIjltw3RNvEERjDZlezrEAtbQ45Oy2tUVTJHsfHc3Y-WqeEtpfNiz2ywg");
-  background-repeat: no-repeat;
+  width: 90%;
+}
+.headerbackgroud img {
+  height: 100px;
 }
 .wrapTitle {
   min-height: 100px;
@@ -51,19 +53,31 @@
   font-weight: bold;
   color: #75a940;
 }
-.container{
-    margin: 20px auto;
+.container {
+  margin: 20px auto;
 }
-.container .slide{
-    width: 1000px;
-    height: 667px;
-    background-color: rgb(4, 34, 34);
+.container .slide {
 }
-.container .slide img{
-    width: 100%;
+.container .news {
 }
+.container .slide img {
+  width: 100%;
+}
+#divDashboard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bgGray {
+  background: #f2f2f2;
+}
+.bgGray img {
+  width: 80%;
+  margin:0px auto ;
+}
+
 #Partners {
-  padding: 50px;
+  padding: 50px 0px 0px 20px;
 }
 #Partners .footer {
   height: 250px;
@@ -84,21 +98,98 @@
   list-style: none;
   text-align: center;
 }
+
+.client-logo:hover{
+  opacity: 0!important;
+}
+.logo-hover {
+  position: absolute;
+}
+
 .contact {
   position: absolute;
   padding-top: 20px;
   bottom: -15px;
   right: 20px;
 }
-.contact i{
+.contact i {
   font-size: 24px;
   padding: 20px 10px;
   cursor: pointer;
   opacity: 0.5;
 }
-.contact i:hover{
+.contact i:hover {
   font-size: 28px;
   padding: 16px 10px;
   cursor: pointer;
   opacity: 1;
+}
+.fa-facebook {
+  color: blue;
+}
+.fa-twitter {
+  color: rgb(68, 136, 226);
+}
+.fa-google {
+  background: conic-gradient(
+      from -45deg,
+      #ea4335 110deg,
+      #4285f4 90deg 180deg,
+      #34a853 180deg 270deg,
+      #fbbc05 270deg
+    )
+    73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.fa-envelope {
+  background: conic-gradient(
+      from -45deg,
+      #ea4335 130deg,
+      #fbbc05 100deg,
+      #4285f4 180deg,
+      #34a853 180deg 270deg
+    )
+    73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+i .email {
+  width: 29px;
+  padding-bottom: 5px;
+}
+i .email:hover {
+  width: 32px;
+  padding-bottom: 5px;
+}
+/* clock */
+.containerclock {
+  height: 10px;
+  width: 200px;
+}
+
+#min {
+  background: red;
+}
+
+#sec {
+  background: blue;
+}
+
+#hour {
+  background: silver;
+}
+
+#container {
+  width: 300px;
+  height: 30px;
+  border: 1px solid green;
+}
+
+p {
+  display: inline;
 }
