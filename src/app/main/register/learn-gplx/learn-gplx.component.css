@@ -1,0 +1,15 @@
+.taskbar a {
+  display: flex;
+  flex: 1;
+}
+
+p {
+  margin-top: 10px;
+}
+label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container {
+  padding: 20px;
+}

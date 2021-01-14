@@ -1,0 +1,15 @@
+<div class="contain row">
+    <div class="name col-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link 1" id="v-pills-phuhieu-tab" data-toggle="pill" [routerLink]="['/search/1']" role="tab"
+                aria-controls="v-pills-phuhieu" aria-selected="true">Tra Cứu Phương Tiện</a>
+            <a class="nav-link 2" id="v-pills-gplx-tab" data-toggle="pill" [routerLink]="['/search/2']" role="tab"
+                aria-controls="v-pills-gplx" aria-selected="false">Tra Cứu GPLX</a>
+            <a class="nav-link 3" id="v-pills-loivipham-tab" data-toggle="pill"[routerLink]="['/search/3']" role="tab"
+                aria-controls="v-pills-loivipham" aria-selected="">Tra Cứu Lỗi Vi Pham</a>
+        </div>
+    </div>
+    <div class="content col-9">
+        <router-outlet></router-outlet>
+    </div>
+</div>

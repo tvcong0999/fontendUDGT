@@ -7,14 +7,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fas fa-home"></i> Trang chủ <span
+                    <a class="nav-link" href="http:/localhost:4200" (click)="refresh()"><i class="fas fa-home"></i> Trang chủ <span
                             class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tra cứu</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Tra cứu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" id="1" [routerLink]="['/search/1']">Tra cứu phương tiện</a>
+                        <a class="dropdown-item" id="2" [routerLink]="['/search/2']">Tra cứu GPLX</a>
+                        <a class="dropdown-item" id="3" [routerLink]="['/search/3']">Tra cứu vi phạm</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tố cáo/Khiếu nại</a>
+                    <a class="nav-link" [routerLink]="['/complaint']">Tố cáo/Khiếu nại</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -22,9 +30,9 @@
                         Đăng kí
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Giấy phép lái xe</a>
-                        <a class="dropdown-item" href="#">Lấy biển số xe</a>
-                        <a class="dropdown-item" href="#">Sang tên xe</a>
+                        <a class="dropdown-item" [routerLink]="['/register/1']">Giấy phép lái xe</a>
+                        <a class="dropdown-item" [routerLink]="['/register/2']">Lấy biển số xe</a>
+                        <a class="dropdown-item" [routerLink]="['/register/3']">Sang tên xe</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -50,190 +58,8 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+
         </div>
     </nav>
 </header>
-<section id="Title" class="wrapTitle">
-    <div>
-        <div class="traffic-home-contain">
-            <div class="col-sm-4">
-                <h4 class="titlePages">Cổng thông tin Giao thông <br> Thành phố Hồ Chí Minh</h4>
-            </div>
-            <div class="col-sm-3 counter">
-                <div id="timeanddate-date" class="counter-title">{{ dateObj | date }} </div>
-
-                <div id="timeanddate-time" class="counter-time">
-                    {{ time | date: 'hh:mm:ss a' }}
-                </div>
-            </div>
-            <div class="col-sm-5 traffic-home-contain">
-                <div class="col-sm-8 col-xs-6 counter">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div id="" class="counter-title">Lượt truy cập</div>
-                            <div id="counter-access" class="counter-access">2,295,300</div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div id="" class="counter-title">Lượt truy cập tháng</div>
-                            <div id="counter-access-month" class="counter-access">8,583</div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-sm-4 col-xs-6 counter">
-                    <div id="" class="counter-title">Online</div>
-                    <div id="counter-online" class="counter-online">4</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div style="clear: both"></div>
-</section>
-<div class="container row">
-    <div class="slide col-7">
-        <div id="slide" class="carousel slide myslide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#slide" data-slide-to="0" class="active"></li>
-                <li data-target="#slide" data-slide-to="1"></li>
-                <li data-target="#slide" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner carinner" role="listbox">
-                <div class="carousel-item active caritem">
-                    <img src="assets/image/1.jpg" alt="">
-                </div>
-                <div class="carousel-item  caritem">
-                    <img src="assets/image/2.jpg" alt="">
-                </div>
-                <div class="carousel-item  caritem">
-                    <img src="assets/image/3.jpg" alt="">
-                </div>
-
-            </div>
-            <a class="carousel-control-prev" href="#slide" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#slide" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-    <div class="news col-5">
-        <div class="item d-flex">
-            <div class="items-img ">
-                <a
-                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">
-                    <img src="https://images.hcmcpv.org.vn/res/news/2020/05/28-05-2020-tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-8DB3800A.jpg?w=217&amp;h=139&amp;mode=pad&amp;vs=28052020092000"
-                        alt="">
-                </a>
-            </div>
-            <div class="items-title d-flex  align-items-end"><a
-                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">TPHCM
-                    kiến nghị thống nhất quy mô dự án xây dựng đường nối đường Trần Quốc Hoàn - Cộng Hòa</a></div>
-        </div>
-        <div class="item d-flex">
-            <div class="items-img ">
-                <a
-                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">
-                    <img src="https://images.hcmcpv.org.vn/res/news/2020/05/28-05-2020-tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-8DB3800A.jpg?w=217&amp;h=139&amp;mode=pad&amp;vs=28052020092000"
-                        alt="">
-                </a>
-            </div>
-            <div class="items-title d-flex  align-items-end"><a
-                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">TPHCM
-                    kiến nghị thống nhất quy mô dự án xây dựng đường nối đường Trần Quốc Hoàn - Cộng Hòa</a></div>
-        </div>
-        <div class="item d-flex">
-            <div class="items-img ">
-                <a
-                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">
-                    <img src="https://images.hcmcpv.org.vn/res/news/2020/05/28-05-2020-tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-8DB3800A.jpg?w=217&amp;h=139&amp;mode=pad&amp;vs=28052020092000"
-                        alt="">
-                </a>
-            </div>
-            <div class="items-title d-flex  align-items-end"><a
-                    href="/tin-tuc/tphcm-kien-nghi-thong-nhat-quy-mo-du-an-xay-dung-duong-noi-duong-tran-quoc-hoan-cong-hoa-1491865659">TPHCM
-                    kiến nghị thống nhất quy mô dự án xây dựng đường nối đường Trần Quốc Hoàn - Cộng Hòa</a></div>
-        </div>
-    </div>
-</div>
-
-<section id="divDashboard" class="bgGray">
-    <img src="assets/image/thongke.jpg" alt="">
-</section>
-<section id="Partners">
-    <div class="footer">
-        <div class="wow fadeInUp animated" data-wow-delay="0.4s"
-            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-            <ul class="client-list">
-                <li>
-                    <a target="_blank" href="http://buyttphcm.com.vn/" class="client-link">
-                        <span class="logo-hover" style="opacity: 0;">
-                            <img src="../assets/image/footer/buyttphcm-hover.png" alt=""></span>
-                        <img src="../assets/image/footer/buyttphcm.png" class="client-logo" alt="" style="opacity: 1;">
-                    </a>
-                </li>
-
-                <li>
-                    <a target="_blank" href="http://www.hanelsoft.vn/" class="client-link">
-                        <span class="logo-hover" style="opacity: 0;">
-                            <img src="../assets/image/footer/hanelsoft-hover.png" alt=""></span>
-                        <img src="../assets/image/footer/hanelsoft.png" class="client-logo" alt="" style="opacity: 1;">
-                    </a>
-                </li>
-
-                <li>
-                    <a target="_blank" href="http://vietbando.com" class="client-link">
-                        <span class="logo-hover" style="opacity: 0;">
-                            <img src="../assets/image/footer/logoVBD-hover.png" alt=""></span>
-                        <img src="../assets/image/footer/logoVBD.png" class="client-logo" alt="" style="opacity: 1;">
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://www.fpt.com.vn" class="client-link">
-                        <span class="logo-hover" style="opacity: 0;">
-                            <img src="../assets/image/footer/fptlogo-hover.png" alt=""></span>
-                        <img src="../assets/image/footer/fptlogo.png" class="client-logo" alt="" style="opacity: 1;">
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="http://www.hamsongsaigon.com.vn/" class="client-link">
-                        <span class="logo-hover" style="opacity: 0;">
-                            <img src="../assets/image/footer/hamthuthiem-hover.png" alt=""></span>
-                        <img src="../assets/image/footer/hamthuthiem.png" class="client-logo" alt=""
-                            style="opacity: 1;">
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="http://drvn.gov.vn/" class="client-link">
-                        <span class="logo-hover" style="opacity: 0;">
-                            <img src="../assets/image/footer/tcdb-hover.png" alt=""></span>
-                        <img src="../assets/image/footer/tcdb.png" class="client-logo" alt="" style="opacity: 1;">
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="http://sgtvt.hochiminhcity.gov.vn/" class="client-link">
-                        <span class="logo-hover" style="opacity: 0;">
-                            <img src="../assets/image/footer/sogtvt-hover.png" alt=""></span>
-                        <img src="../assets/image/footer/sogtvt.png" class="client-logo" alt="" style="opacity: 1;">
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="contact">
-            <span><b>Liên hệ:</b> 037616650 (Mr.Cong)</span> <br>
-            <i class="fab fa-facebook" aria-hidden="true"></i>
-            <i class="fab fa-twitter" aria-hidden="true"></i>
-            <i class="fab fa-google" aria-hidden="true"></i>
-            <i><img class="email"
-                    src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63"></i>
-
-        </div>
-    </div>
-</section>
+<router-outlet></router-outlet>
