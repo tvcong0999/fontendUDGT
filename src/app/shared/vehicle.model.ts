@@ -6,11 +6,13 @@ export class Vehicle {
     purchaseDate: string;
     vehicleBrand: string;
     status: string;
-    chasisNumber: number;
+    vehicleChasisNumber: number;
     owner: {
         ownerId: string;
         ownerIdentificationNumber: string;
         drivingLicenseNumber: string;
+        ownerName: string;
+        ownerAddress: string;
         ownedVehicles: string;
     };   
 }
