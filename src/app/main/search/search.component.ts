@@ -10,7 +10,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   constructor(private router: Router) { }
   public className;
-  ngAfterViewInit(): void{
+  ngAfterViewInit(): void {
     $('.contain .name .' + this.router.url.slice(-1)).addClass('active');
   }
   ngOnInit(): void {
