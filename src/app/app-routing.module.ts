@@ -11,13 +11,14 @@ import { GivePlateVehicleComponent } from './main/register/give-plate-vehicle/gi
 import { SearchGplxComponent } from './main/search/search-gplx/search-gplx.component';
 import { SearchViolationComponent } from './main/search/search-violation/search-violation.component';
 import { ComplaintComponent } from './main/complaint/complaint.component';
-
+import { RetractComponent }from'./main/retract/retract.component';
 
 const routes: Routes = [
     {path: '', component: SubMainComponent},
   {path: 'search', component: SearchComponent, children:[{path: '1', component: SearchVehicleComponent},{path: '2', component: SearchGplxComponent},{path: '3', component: SearchViolationComponent}]},
   {path: 'register', component: RegisterComponent, children:[{path: '1', component: LearnGPLXComponent},{path: '2', component: GivePlateVehicleComponent}]},
   {path: 'complaint', component: ComplaintComponent},
+  {path:'retract',component:RetractComponent},
 ]
 
 @NgModule({
